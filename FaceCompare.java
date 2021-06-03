@@ -102,6 +102,10 @@ public class FaceCompare
         }
         distances.sort(null);
         double target = distances.get(1);
+        if (target >= 2*Math.pow(10, 17))
+        {
+            return null;
+        }
         boolean isFound = false;
         int index = 1;
         while (!isFound)
